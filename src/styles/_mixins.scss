@@ -1,0 +1,10 @@
+@mixin botao-padrao ($color, $bg-color, $border-color, $border-size) {
+    color: $color;
+    background-color: $bg-color;    
+    padding: 0.438rem 0;
+    border-radius: 6px;
+    border-color: $border-color;
+    border-width: $border-size;
+    border-style: solid;
+    text-transform: uppercase;
+}

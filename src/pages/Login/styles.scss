@@ -1,0 +1,123 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.bg-login {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: relative;    
+}
+
+.bg-login .column-image {
+    width: 55%;
+    height: 100%;
+    background-image: url(#{$image-path}fundo-login.png);
+    background-size: cover;
+    background-position: top center;
+    padding: 2rem;
+
+    .logo {
+        max-width: 200px;
+        height: auto;
+    }
+}
+
+.bg-login .column-form {
+    width: 45%;
+    height: auto;
+    padding: 4rem;
+
+    h1 {
+        font-size: $font-xxl;
+        color: $dark-color;
+        font-weight: 700;
+
+        span {
+            color: $primary-color;
+        }
+    }
+
+    h2 {
+        font-size: $font-xl;
+        color: $dark-color;
+        font-weight: 300;
+        margin-bottom: 4rem;
+    }
+
+    .linha-input {
+        display: block;
+        margin-bottom: 1rem;
+
+        span {
+            display: block;
+            font-size: $font-lg;
+            color: $dark-color;
+            margin-bottom: 0.313rem;
+        }
+
+        input {
+            width: 100%;
+            height: auto;
+            padding: 0.875rem;
+            border: 2px solid $light-gray-color;
+            border-radius: 6px;
+
+            &:focus{
+                border-color: $primary-color !important;
+
+            }
+        }
+    }
+
+    .rodape-form-login {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+
+
+        .lembrar {
+            font-size: $font-sm;
+            color: $black-color;
+            font-weight: 600;
+        }
+
+        .recuperar-senha {
+            color: $secondary-color;
+            font-size: $font-sm;
+            font-weight: 600;
+        }
+    }
+
+    input[type="submit"] {
+        @include botao-padrao($white-color, $primary-color, $primary-color, 1px);
+        width: 100%;
+        height: auto;
+        font-size: $font-lg;
+        margin-bottom: 1.5rem;
+    }
+
+    .form-invalido {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    
+
+    .cadastre {
+        text-align: center;
+        font-size: $font-xl;
+        font-weight: 300;
+        color: $dark-color;
+
+        a {
+            color: $primary-color;
+            font-weight: 700;
+        }
+    }
+}
