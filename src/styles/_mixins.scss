@@ -1,3 +1,5 @@
+@use './variables' as *;
+
 @mixin botao-padrao ($color, $bg-color, $border-color, $border-size) {
     color: $color;
     background-color: $bg-color;    
@@ -7,4 +9,11 @@
     border-width: $border-size;
     border-style: solid;
     text-transform: uppercase;
+    cursor: pointer;
+
+
+    &:hover {
+        background-color: $white-color;
+        color: $primary-color;
+    }
 }

@@ -1,0 +1,110 @@
+@use '../../../../styles/mixins' as *;
+@use '../../../../styles/variables' as *;
+
+.bloco-cartao {
+    padding: 1.6rem;
+    border-radius: 8px;
+    background-color: $white-color;
+    box-shadow: rgba(0, 0, 0, 0.3921568627) 0px 4px 4px;
+    width: 49%;    
+}
+
+.bloco-cartao h2 {
+    color: $dark-color;
+    font-size: $font-lg;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+}
+
+.bloco-cartao .colunas-info-cartao {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.bloco-cartao .colunas-info-cartao .dados-cartao {
+    
+    img {
+        margin-bottom: 1rem;
+    }
+
+    .limites {
+        .barra-limite {
+            width: 100%;
+            height: 8px;
+            background-color: $light-gray-color;
+            border-radius: 5.17px;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 0.625rem;
+
+            &::before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 10%;
+                background-color: $primary-color;
+                border-radius: 5.17px;
+            }
+        }
+
+        .info-limite {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            span {
+                font-size: $font-sm;
+                color: $dark-color;
+            }
+        }
+    }
+}
+
+
+.bloco-cartao .colunas-info-cartao .info-valores {
+    width: 40%;
+
+    h2 {
+        font-size: $font-xl;
+        font-weight: 600;
+        color: $dark-color;
+
+        span {
+            font-size: $font-md;
+            font-weight: 300;
+            display: block;
+        }
+    }
+
+    .ultima-compra {
+        margin-bottom: 2rem;
+        h3 {
+            font-size: $font-md;
+            font-weight: 300;
+            display: block;
+        }
+
+        .valor-ultima-compra {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            span {
+                font-size: $font-md;
+                font-weight: 600;
+                color: $dark-color;
+            }
+        }
+    }
+
+    .btn-mais-detalhes {
+        @include botao-padrao($white-color, $primary-color, $primary-color, 1px);
+        display: block;
+        text-align: center;
+        font-size: $font-lg;
+    }
+}
+
+

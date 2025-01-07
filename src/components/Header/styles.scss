@@ -1,0 +1,64 @@
+@use '../../styles/variables' as *;
+
+header.header {
+    width: 100%;
+    height: auto;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header.header .form-busca {
+    position:relative;
+
+    input[type="search"]{
+        border-radius: 6px;
+        border: 1px solid $white-color;
+        padding: 0.625rem;
+        background-color: transparent;
+        padding-left: 2.5rem;
+        width: 240px;
+        max-width: 100%;
+
+        &::placeholder {
+            color: $white-color;           
+        }
+    }
+
+    button {
+        background-color: transparent;
+        font-size: $font-lg;
+        border: 0;
+        position: absolute;
+        left: 0.625rem;
+        top: 0.625rem;
+        cursor: pointer;
+    }
+}
+
+header.header .topo-usuario {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: $white-color;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 1.5rem;
+
+        .icon {
+            margin-top: 5px;
+        }
+
+        &:last-child .icon {
+            margin-right: 1rem;
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}

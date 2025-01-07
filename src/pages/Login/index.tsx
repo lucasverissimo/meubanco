@@ -29,7 +29,7 @@ export function Login(){
             setValidForm(false);
         }else {
             setValidForm(true);
-            const r = handleLogin(form.usuario, form.senha);
+            handleLogin(form.usuario, form.senha);
             navigate('/dashboard')
         }
     }

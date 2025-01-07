@@ -1,0 +1,39 @@
+@use '../../../../styles/variables' as *;
+
+.bloco-resumo-financeiro {
+    box-shadow: #00000064 0px 4px 4px;
+}
+
+.bloco-resumo-financeiro span {
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.bloco-resumo-financeiro span.valor-porcentagem {
+    font-size: $font-xl;
+    color: $primary-color;
+    font-weight: 300;
+}
+
+.bloco-resumo-financeiro span.valor-mix {
+    font-size: $font-sm;
+    color: $white-color;
+    font-weight: 600;
+    background-color: $primary-color;
+    padding: 0.225rem 0.625rem;
+    border-radius: 6px;
+}
+
+.bloco-resumo-financeiro .info-resumo {
+    color: $dark-color;
+
+    p {
+        font-size: $font-md;    
+        font-weight: 300;    
+    }
+
+    h3 {
+        font-size: $font-xl;
+        font-weight: bold;
+    }
+}

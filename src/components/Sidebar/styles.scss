@@ -1,0 +1,98 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+
+.sidebar {
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.sidebar .topo-sidebar {
+    width: 100%;
+}
+
+.sidebar .topo-sidebar .logo-sidebar {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 3rem;
+}
+
+.sidebar .topo-sidebar .menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar .topo-sidebar .menu li {
+    width: 100%; 
+    margin-bottom: 0.313rem;   
+    a {
+        
+        background-color: $white-color;
+        padding: 1rem;
+        font-size: $font-lg;
+        border-radius: 12px 0 0 12px;
+        color: $dark-color;
+        font-weight: bold;
+        
+        display: flex;
+        align-items: start;
+        justify-content: start;
+        gap: 1rem;
+
+        &:hover {
+            color: $primary-color; 
+            background-color: transparent;
+           .icon svg {
+                fill: $dark-color !important;
+                color: $dark-color;
+           }
+        }
+    }     
+}
+
+.sidebar .topo-sidebar .menu li {
+    a.selected {  
+        color: $white-color; 
+        background-color: $primary-color;
+        .icon svg {
+            fill: $white-color !important;
+            color: $white-color;
+        }
+    }
+}
+
+.sidebar .card-rodape-sidebar {
+    background-color: $primary-color;
+    width: calc(100% - 2rem);
+    height: auto;
+    padding: 0.875rem;
+    border-radius: 6px;
+    color: $white-color;
+
+    h2 {
+        font-size: $font-xl;
+        font-weight: bold;
+        margin-bottom: 0.875rem;
+    }
+
+    p {
+        font-size: $font-md;
+        margin-bottom: 1rem;
+    }
+
+    a {
+        @include botao-padrao($white-color, $primary-color, $white-color, 2px);
+        display: inline-block;
+        padding-left: 1rem; 
+        padding-right: 1rem;
+        font-weight: bold;
+        font-size: $font-lg;
+    }
+}

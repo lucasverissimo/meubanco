@@ -1,0 +1,73 @@
+@use '../../../../styles/mixins' as *;
+@use '../../../../styles/variables' as *;
+
+
+.lista-ultimas-compras {
+    padding: 1.6rem;
+    border-radius: 8px;
+    background-color: $white-color;
+    box-shadow: rgba(0, 0, 0, 0.3921568627) 0px 4px 4px;
+    width: 49%;  
+}
+
+.lista-ultimas-compras {
+    h2 {
+        color: $dark-color;
+        font-size: $font-lg;
+        font-weight: 600;
+        margin-bottom: 1.2rem;
+    }
+
+    .btn-ver-extrato {
+        @include botao-padrao($white-color, $primary-color, $primary-color, 1px);
+        display: block;
+        text-align: center;
+        margin: auto;
+        width: 195px;
+        font-size: $font-lg;
+    }
+}
+
+.lista-ultimas-compras .lista-compras {
+    margin-bottom: 2rem;
+    .bloco-data {
+        margin-bottom: 1rem;
+    }
+
+    h3 {
+        color: $primary-color;
+        font-size: $font-sm;
+        font-weight: bold;
+        margin-bottom: 0.475rem;
+    }
+
+    .lista-detalhada {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            border-bottom: 1px solid $gray-color;
+            padding: 0.314rem;
+
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+        }
+
+        .info-compra{
+            h4{
+                font-size: $font-sm;
+                color: $dark-color;
+                font-weight: 400;
+            }
+
+            span {
+                font-size: $font-xs;
+                color: $gray-color;
+                font-weight: 600;
+            }
+            
+        }
+    }
+}

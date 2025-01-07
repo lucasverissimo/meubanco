@@ -1,7 +1,7 @@
 import { BrowserRouter } from 'react-router'
 import { RoutesApp } from './routes'
 
-import { AppContextProvider  } from './contexts/AppContext'
+import { AppContextProvider  } from './contexts/AppContextProvider'
 
 function App() {
   return (

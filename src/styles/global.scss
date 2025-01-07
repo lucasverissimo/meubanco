@@ -1,1 +1,133 @@
-@use 'reset';
+@use 'reset' as *;
+@use 'variables' as *;
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+	background: var(--act_theme_cor_4);	
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment  {
+	display: none;
+}
+
+::-webkit-scrollbar-track-piece  {
+	background-color: transparent;
+	-webkit-border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb:vertical {
+	background-color: #fff;
+	-webkit-border-radius: 0px;
+	height: 6px;
+}
+
+::-webkit-scrollbar-thumb:horizontal{
+	background: #fff;
+	border-radius: 4px;
+	width: 10px;
+}
+
+
+::-moz-scrollbar {
+	width: 5px;
+	height: 5px;		
+}
+
+::-moz-scrollbar-button:start:decrement,
+::-moz-scrollbar-button:end:increment  {
+	display: none;
+}
+
+::-moz-scrollbar-track-piece  {
+	background-color: transparent;
+	-webkit-border-radius: 4px;
+}
+
+::-moz-scrollbar-thumb:vertical {
+	background-color: #fff;
+	-webkit-border-radius: 4px;
+}
+
+::-moz-scrollbar-thumb:horizontal{
+	background: #efefef;
+	border-radius: 4px;
+	width: 10px;	
+}
+
+::-scrollbar-button:start:decrement,
+::-scrollbar-button:end:increment  {
+	display: none;
+}
+
+::-scrollbar-track-piece  {
+	background-color: transparent;
+	-webkit-border-radius: 4px;
+}
+
+::-scrollbar-thumb:vertical {
+	background-color: #fff;
+	-webkit-border-radius: 0px;
+	height: 6px;
+}
+
+::-scrollbar-thumb:horizontal{
+	background: #efefef;
+	border-radius: 6px;
+	width: 10px;
+}
+
+html, body, #root {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 1300px){
+	html, body {
+		font-size: 80%;
+	}
+}
+
+main.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+}
+
+
+main.main .columnLeft {
+    width: 20%;
+    height: 100%;
+}
+
+main.main .columnRight {
+    width: 80%;
+    height: 100%;
+    background-color: $primary-color;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+main.main .placeholder-navegacao {
+    background-color: $white-color;
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    flex: 1;
+}
+
+main.main .conteudo {
+    width: 100%;
+    height: auto;
+    flex: 1;
+    overflow-y: auto;
+	padding-right: 5px;
+}
