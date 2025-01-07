@@ -17,7 +17,6 @@
 ### 2. Redirecionamento e Roteamento
 - Foi utilizado o **React Router** para gerenciar as rotas da aplicação.
 - A página de login (`/`) é acessível inicialmente, e o redirecionamento para a página de **Dashboard** (`/dashboard`) é realizado após o login bem-sucedido.
-- Implementação de tratamento para rotas não encontradas, com redirecionamento para a página de dashboard.
 
 ### 3. Estilização com SASS
 - A aplicação foi estilizada usando **SASS**, garantindo um código mais limpo e reutilizável.
