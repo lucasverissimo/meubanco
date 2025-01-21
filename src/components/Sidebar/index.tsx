@@ -1,5 +1,5 @@
 import { ReactSVG } from 'react-svg'
-import { useLocation } from 'react-router'
+import { useLocation, Link } from 'react-router'
 
 import './styles.scss';
 
@@ -52,10 +52,10 @@ export function Sidebar(){
                 <ul className="menu">
                     {menu.map((m, index) => (
                         <li key={index+m.path}>
-                            <a href={m.path} className={location.pathname === m.path ? 'selected' : ''}>
+                            <Link to={m.path} className={location.pathname === m.path ? 'selected' : ''}>
                                 <ReactSVG src={m.icon} className="icon" />
                                 {m.name}
-                            </a>
+                            </Link>
                         </li>
                     ))}
                     
